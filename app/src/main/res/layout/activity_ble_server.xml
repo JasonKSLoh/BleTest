@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_server35"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        app:layout_constraintGuide_percent="0.25"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_server_clientlist_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/connected_devices"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_dark"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_server_clientlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_server_clientlist_label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gl_server35"/>
+
+    <TextView
+        android:id="@+id/tv_server_messages_label"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/gl_server35"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/messages"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_dark"
+        android:scrollbars="vertical"/>
+
+    <TextView
+        android:id="@+id/tv_server_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_server_messages_label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_server_message"
+        tools:text="This is some text"
+        />
+
+    <EditText
+        android:id="@+id/et_server_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btn_server_startstop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:imeOptions="actionDone"
+        android:inputType="textImeMultiLine"
+        android:hint="@string/enter_message"/>
+
+    <Button
+        android:id="@+id/btn_server_startstop"
+        android:background="@android:color/holo_red_dark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_show_qr"
+        android:textColor="@android:color/white"
+        android:text="@string/stop_server"
+        />
+
+    <Button
+        android:id="@+id/btn_show_qr"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/btn_server_startstop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/show_qr"/>
+
+</android.support.constraint.ConstraintLayout>

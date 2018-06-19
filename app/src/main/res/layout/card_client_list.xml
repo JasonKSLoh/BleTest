@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tv_card_client_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="left"
+        android:textStyle="bold"
+        tools:text="Client Name Here"/>
+
+    <TextView
+        android:id="@+id/tv_card_client_addr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/tv_card_client_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_card_client_name"
+        android:gravity="right"
+        tools:text="12312123-123123-12313-13231-3231212313"/>
+</android.support.constraint.ConstraintLayout>

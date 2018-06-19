@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_server"
+        android:src="@drawable/ic_server_24dp"
+        android:background="@drawable/border_simple"
+        android:padding="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintDimensionRatio="H, 1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_client"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_server"
+        app:layout_constraintLeft_toLeftOf="@id/iv_server"
+        app:layout_constraintRight_toRightOf="@id/iv_server"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Server"/>
+
+    <ImageView
+        android:id="@+id/iv_client"
+        android:src="@drawable/ic_phone_android_black_24dp"
+        android:background="@drawable/border_simple"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintDimensionRatio="H, 1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iv_server"
+        app:layout_constraintRight_toRightOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_client"
+        app:layout_constraintLeft_toLeftOf="@id/iv_client"
+        app:layout_constraintRight_toRightOf="@id/iv_client"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Client"/>
+
+</android.support.constraint.ConstraintLayout>
